@@ -1,14 +1,12 @@
 .page-header {
-  border: solid black 5px;
   display: block;
-  /*width: 100%;*/
   position: relative;
+  background-color: gold;
+  height: 80px;
 }
 
 .logo-and-name {
   float: left;
-  border: 5px red dotted;
-  /*position: absolute;*/
 }
 
 .logo-and-name img {
@@ -22,39 +20,107 @@
   font-size: 30px;
   margin-bottom: 0;
   margin-top: 0;
-  /*clear: right;*/
+  font-family: sans-serif;
   float: right;
 }
 
 .logo-and-name h2 {
-  font-size: 14px;
+  font-size: 17px;
+  font-family: cursive;
   clear: right;
 }
 
-.main-nav {
+.icon-menu {
+  font-size: 40px;
+  margin: 0px;
   float: right;
-  border: 5px green dotted;
-  /*position: absolute;*/
+}
+
+.main-nav li {
+  margin-right: .4rem;
+  font-size: 1.5rem;
+  padding: .5rem .2rem;
+  border-bottom: 1px solid #000;
 }
 
 .main-nav ul {
   display: none;
-}
-
-.main-nav li {
-  /*left;*/
+  padding: 0;
+  list-style: none;
+  clear: both;
+  background-color: gold;
+  padding: 15px;
+  text-decoration: none;
 }
 
 .main-nav:hover ul {
   display: block;
-  list-style: none;
-  position: absolute;
-  right: -5px;
 }
 
-
-.clearfix {
-  clear: both;
+.main-nav ul li a {
+  color: black;
+  text-decoration: none;
 }
 
-@media
+#article-container {
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 376px) {
+
+  .icon-menu {
+    display: none;
+    color: black;
+  }
+
+  .main-nav ul {
+    display: flex;
+    padding-left:
+    background-color: gold;
+    color: black;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .main-nav ul li a{
+    color: black;
+  }
+
+  .main-nav ul li {
+    border-bottom: 1px solid #000;
+    list-style: none;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-bottom: 0;
+  }
+
+  .main-nav:hover {
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  .icon-menu {
+    display: none;
+    color: black;
+  }
+  .main-nav ul {
+    justify-content: space-around;
+    background-color: gold;
+    color: black;
+    /*width: 100%;*/
+  }
+
+  .main-nav ul li a{
+    color: black;
+  }
+
+  .main-nav ul li {
+    border-bottom: 1px solid #000;
+    list-style: none;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-bottom: 0;
+    margin-bottom: -10px;
+  }
+}
