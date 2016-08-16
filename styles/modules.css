@@ -1,0 +1,60 @@
+.page-header {
+  border: solid black 5px;
+  display: block;
+  /*width: 100%;*/
+  position: relative;
+}
+
+.logo-and-name {
+  float: left;
+  border: 5px red dotted;
+  /*position: absolute;*/
+}
+
+.logo-and-name img {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  float: left;
+}
+
+.logo-and-name h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
+  /*clear: right;*/
+  float: right;
+}
+
+.logo-and-name h2 {
+  font-size: 14px;
+  clear: right;
+}
+
+.main-nav {
+  float: right;
+  border: 5px green dotted;
+  /*position: absolute;*/
+}
+
+.main-nav ul {
+  display: none;
+}
+
+.main-nav li {
+  /*left;*/
+}
+
+.main-nav:hover ul {
+  display: block;
+  list-style: none;
+  position: absolute;
+  right: -5px;
+}
+
+
+.clearfix {
+  clear: both;
+}
+
+@media
