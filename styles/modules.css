@@ -1,8 +1,15 @@
-.page-header {
-  display: block;
-  position: relative;
+.clearfix {
+  clear: both;
+}
+
+body {
   background-color: gold;
-  height: 80px;
+}
+
+.page-header {
+  /*display: block;*/
+  /*position: relative;*/
+  background-color: gold;
 }
 
 .logo-and-name {
@@ -22,6 +29,7 @@
   margin-top: 0;
   font-family: sans-serif;
   float: right;
+  background-color: gold;
 }
 
 .logo-and-name h2 {
@@ -36,10 +44,14 @@
   float: right;
 }
 
+.main-nav {
+  /*padding: 0.1em;*/
+}
+
 .main-nav li {
   margin-right: .4rem;
   font-size: 1.5rem;
-  padding: .5rem .2rem;
+  /*padding: .5rem .2rem;*/
   border-bottom: 1px solid #000;
 }
 
@@ -49,7 +61,7 @@
   list-style: none;
   clear: both;
   background-color: gold;
-  padding: 15px;
+  /*padding: 15px;*/
   text-decoration: none;
 }
 
@@ -63,10 +75,10 @@
 }
 
 #article-container {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
 }
 
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 400px) {
 
   .icon-menu {
     display: none;
