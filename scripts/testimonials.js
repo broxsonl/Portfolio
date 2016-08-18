@@ -1,4 +1,4 @@
-var testimonials = [
+var testimonialObjectArray = [
   {
     name:             'Rick_Patci',
     quote:            'Lee is the best programmer ever. I am continually blown away by what he can do.',
@@ -13,7 +13,6 @@ var testimonials = [
     quoteAuthor:      'Sam Hamm',
     quoteAuthorLink:  'http://samhamm.com'
 
-  },
-
+  }
 
 ];

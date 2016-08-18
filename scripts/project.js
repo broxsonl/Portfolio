@@ -34,5 +34,5 @@ projectObjectsArray.forEach(function(theCurrentProjectObject) {
 });
 
 projects.forEach(function(project) {
-  $('#project-header').append(project.toHtml());
+  $('#projects').append(project.toHtml());
 });
