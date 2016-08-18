@@ -29,10 +29,10 @@ projectObjectsArray.sort(function(firstElement, secondElement) {
   return (new Date(secondElement.updatedOn)) - (new Date(firstElement.updatedOn));
 });
 
-projectObjectsArray.forEach(function(theCurrentArticleObject) {
-  projects.push(new Project(theCurrentArticleObject));
+projectObjectsArray.forEach(function(theCurrentProjectObject) {
+  projects.push(new Project(theCurrentProjectObject));
 });
 
 projects.forEach(function(project) {
-  $('#project-header').append(project.toHtml());
+  $('#projects').append(project.toHtml());
 });
