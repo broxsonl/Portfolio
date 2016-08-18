@@ -2,3 +2,8 @@ h1 {
   font-size: 30px;
   margin-top: 0;
 }
+
+.project-picture img {
+  width: 400px;
+  height: 280px;
+}

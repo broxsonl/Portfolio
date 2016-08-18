@@ -82,6 +82,16 @@ body {
   display: none;
 }
 
+#testimonials {
+  justify-content: center;
+}
+
+#testimonials img {
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+}
+
 @media only screen and (min-width: 400px) {
 
   .icon-menu {
