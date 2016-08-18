@@ -3,13 +3,13 @@
 }
 
 body {
-  background-color: gold;
+  background: linear-gradient( 45deg, yellow, orange, white);
 }
 
 .page-header {
   /*display: block;*/
   /*position: relative;*/
-  background-color: gold;
+  /*background-color: gold;*/
 }
 
 .logo-and-name {
@@ -29,7 +29,7 @@ body {
   margin-top: 0;
   font-family: sans-serif;
   float: right;
-  background-color: gold;
+  /*background-color: gold;*/
 }
 
 .logo-and-name h2 {
@@ -44,10 +44,6 @@ body {
   float: right;
 }
 
-.main-nav {
-  /*padding: 0.1em;*/
-}
-
 .main-nav li {
   margin-right: .4rem;
   font-size: 1.5rem;
@@ -60,7 +56,7 @@ body {
   padding: 0;
   list-style: none;
   clear: both;
-  background-color: gold;
+  /*background-color: gold;*/
   /*padding: 15px;*/
   text-decoration: none;
 }
@@ -79,6 +75,10 @@ body {
 }
 
 .template {
+  display: none;
+}
+
+.testimonial-template {
   display: none;
 }
 
