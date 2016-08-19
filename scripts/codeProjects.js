@@ -36,3 +36,5 @@ var projectObjectsArray = [
     updatedOn:          '2016-08-12',
   }
 ];
+
+//Readying file for lab assignment, day05
