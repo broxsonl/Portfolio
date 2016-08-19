@@ -8,13 +8,9 @@ function Testimonial (opts) {
 };
 
 Testimonial.prototype.toHtml = function() {
-  var $newTestimonial = $('article.testimonial-template').clone();
-  $newTestimonial.attr('data-name', this.name);
-  $newTestimonial.find('.testimonial-quote').text(this.quote);
-  $newTestimonial.find('.testimonial-author ').text(this.quoteAuthor);
-  $newTestimonial.find('.testimonial-author').attr('href', this.quoteAuthorLink);
-  $newTestimonial.removeClass('testimonial-template');
-  return $newTestimonial;
+  var source = $('#testimonial-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
 
 testimonialObjectArray.forEach(function(theCurrentTestimonialObject) {
