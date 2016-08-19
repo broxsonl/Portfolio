@@ -13,4 +13,10 @@ h2{
   font-family: 'Share Tech', sans-serif;
   font-size: 35px;
   margin-top: 0;
+  padding-bottom: 5px;
+  border-bottom: solid 3px grey;
+}
+
+a {
+  text-decoration: none;
 }

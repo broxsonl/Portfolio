@@ -1,7 +1,7 @@
 var projectObjectsArray = [
   {
     name:               'about_me',
-    title:              'Code 201 About_Me Project',
+    title:              'Code 201 - About_Me Project',
     subtitle:           'Who am I, really?',
     projectUrl:         'https://broxsonl.github.io/about_me/',
     projectImage:       'assets/about_mescreen.png',
@@ -10,8 +10,8 @@ var projectObjectsArray = [
   },
   {
     name:               'salmoncookies',
-    title:              'Code 201 Salmon Cookie Project',
-    subtitle:           'subtitle stuff here',
+    title:              'Code 201 - Salmon Cookie Project',
+    subtitle:           'Cookies made out of...salmon?',
     projectUrl:         'https://broxsonl.github.io/salmoncookies/',
     projectImage:       'assets/salmoncookiesscreen.png',
     imageAlt:           'salmoncookie project pic',
@@ -19,8 +19,8 @@ var projectObjectsArray = [
   },
   {
     name:               'busmall',
-    title:              'Code 201 Bus Mall Project',
-    subtitle:           'subtitle stuff here',
+    title:              'Code 201 - Bus Mall Project',
+    subtitle:           'Like SkyMall...only better',
     projectUrl:         'https://broxsonl.github.io/busmall',
     projectImage:       'assets/busmallscreen.png',
     imageAlt:           'busmall project pic',
@@ -28,8 +28,8 @@ var projectObjectsArray = [
   },
   {
     name:               'firstdayofskeewl',
-    title:              'Code 201 FirstDayofSkeewl Project',
-    subtitle:           'subtitle stuff here',
+    title:              'Code 201 - First Day of Skeewl Project',
+    subtitle:           'Choose your own adventure!',
     projectUrl:         'https://broxsonl.github.io/FirstDayofSkeewl/',
     projectImage:       'assets/skeewlscreen.png',
     imageAlt:           'firstdayofskeewl project pic',

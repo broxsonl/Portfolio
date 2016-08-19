@@ -25,6 +25,7 @@ body {
   font-size: 17px;
   font-family: cursive;
   clear: right;
+  border: none;
 }
 
 .icon-menu {
@@ -75,9 +76,18 @@ h1.project-title {
 
 p.sub-heading {
   font-style: italic;
-  margin-top: 0;
-  margin-left: 15px;
+  margin: 0 0 0 15px;
   color: brown;
+}
+
+.see-more {
+  margin-top: 0;
+  color: grey;
+  font-size: 20px;
+}
+.see-less {
+  color: grey;
+  font-size: 20px;
 }
 
 .template {
@@ -86,6 +96,10 @@ p.sub-heading {
 
 .testimonial-template {
   display: none;
+}
+
+article {
+
 }
 
 #testimonials {
