@@ -12,17 +12,12 @@ function Project (opts) {
 };
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.find('h1').text(this.title);
-  $newProject.attr('data-name', this.name);
-  $newProject.find('p').text(this.subtitle);
-  $newProject.find('.project-picture a').attr('href', this.projectUrl);
-  $newProject.find('.project-picture a img').attr('src', this.projectImage);
-  $newProject.find('.project-picture a img').attr('alt', this.imageAlt);
-  $newProject.find('time[pubdate]').attr('title', this.updatedOn);
-  $newProject.find('time').html('last updated ' + parseInt((new Date() - new Date(this.updatedOn))/60/60/24/1000) + ' days ago');
-  $newProject.removeClass('template');
-  return $newProject;
+  var source = $('#project-template').html();
+  var templateRender = Handlebars.compile(source);
+
+  this.daysAgo = parseInt((new Date() - new Date(this.updatedOn))/60/60/24/1000);
+  this.publishStatus = this.updatedOn ? 'updated ' + this.daysAgo + ' days ago' : '(draft)';
+  return templateRender(this);
 };
 
 projectObjectsArray.sort(function(firstElement, secondElement) {

@@ -1,0 +1,8 @@
+.clearfix {
+  clear: both;
+}
+
+h2 {
+  padding-bottom: 5px;
+  border-bottom: solid 3px grey;
+}

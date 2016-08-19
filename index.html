@@ -4,11 +4,38 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width, initial-scale=1”>
     <title>Portfolio | Lee Broxson - Javascript Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share+Tech">
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="vendor/styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+
+    <!--Template for Projects constructor and page -->
+      <script id="project-template" type="text/x-handlebars-template">
+        <article data-name="{{name}}">
+          <h1 class="project-title">{{title}}</h1>
+          <p class="sub-heading">{{subtitle}} - <span class ="days-ago">{{publishStatus}}</span></p>
+          <a href="#" class="see-more">See more &rarr;</a>
+          <br>
+          <br>
+          <div class="project-picture">
+            <a href="{{projectUrl}}">
+              <img src="{{projectImage}}" alt="{{imageAlt}}">
+            </a>
+            <br>
+          </div>
+        </article>
+      </script>
+
+      <script id="testimonial-template" type="text/x-handlebars-template">
+        <article data-name="{{name}}">
+          <img src="assets/quote.png" alt="Big Quotation Marks">
+          <p class="testimonial-quote"> {{quote}} </p>
+          <address><a class="testimonial-author" href="{{quoteAuthorLink}}">{{quoteAuthor}}</a></address>
+        </article>
+        <br>
+      </script>
   </head>
   <body>
     <header class="page-header">
@@ -33,45 +60,32 @@
         </ul>
       </nav>
     </header>
-    <!-- <div class="clearfix"></div> -->
+    <div class="clearfix"></div>
     <main>
-        <section id="projects" class="tab-content">
-          <h1>
-            Development Projects
-          </h1>
-          <article class="template" data-name="placeholder-name">
-            <h1 class="project-title">Title</h1>
-            <p class="sub-heading">Brief Description</p>
-            <div class="project-picture">
-              <a href="">
-                <img src="" alt="">
-              </a>
-            <time pubdate datetime="2000-01-01">Publish Time</time>
-            </div>
-          </article>
-    </section>
-    <section id="testimonials" class="tab-content">
-      <h1>
-        Client Testimonials
-      </h1>
-      <article class="testimonial-template" data-name="placeholder-name">
-        <!--Insert pic of big quotation marks-->
-        <img src="#" alt="Big Quotation Marks">
-        <p class="testimonial-quote"> Text here </p>
-        <p class="testimonial-author">
-          <cite class="quote-author">Name</cite>,<address><a href="">Author Name</a></address>
-        </p>
+      <!--Projects Section -->
+      <section id="projects" class="tab-content">
+        <br>
+        <br>
+        <h2>
+          Development Projects
+        </h2>
+      </section>
 
-    </section>
-
-  </main>
-  <footer>
-  </footer>
-  <script src="vendor/scripts/jquery-3.1.0.js"></script>
-  <script src="scripts/codeProjects.js"></script>
-  <script src="scripts/project.js"></script>
-  <script src="scripts/testimonials.js"></script>
-  <script src="scripts/testimonialCreator.js"></script>
-  <script src="scripts/projectView.js"></script>
+      <!--Testimonials section-->
+      <section id="testimonials" class="tab-content">
+        <h2>
+          Client Testimonials
+        </h2>
+      </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="vendor/scripts/jquery-3.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="scripts/codeProjects.js"></script>
+    <script src="scripts/project.js"></script>
+    <script src="scripts/testimonials.js"></script>
+    <script src="scripts/testimonialCreator.js"></script>
+    <script src="scripts/projectView.js"></script>
   </body>
 </html>
