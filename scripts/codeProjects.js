@@ -6,7 +6,7 @@ var projectObjectsArray = [
     projectUrl:         'https://broxsonl.github.io/about_me/',
     projectImage:       'assets/about_mescreen.png',
     imageAlt:           'about_me project pic',
-    updatedOn:          '2015-07-22',
+    updatedOn:          '2016-07-22',
   },
   {
     name:               'salmoncookies',
