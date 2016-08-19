@@ -22,12 +22,18 @@ projectView.handleMainNav = function() {
 projectView.setTeasers = function() {
   $('.project-picture').hide();
 
-  $('#projects').on('click', 'a.see-more', function(e) {
+  $('#projects').on('click', '.see-more', function(e) {
     e.preventDefault();
     $(this).parent().find('*').fadeIn();
-    $(this).hide();
+    $(this).html('See less &larrhk;').removeClass('see-more').addClass('see-less');
   });
 
+  $('#projects').on('click', '.see-less', function(event){
+    event.preventDefault();
+    $('.project-picture').hide();
+    $(this).html('Read on &#x21aa').removeClass('see-less').addClass('see-more');
+
+  });
 };
 
 projectView.handleMainNav();
