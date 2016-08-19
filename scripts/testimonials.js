@@ -1,3 +1,5 @@
+'use strict';
+
 var testimonialObjectArray = [
   {
     name:             'Rick_Patci',

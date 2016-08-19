@@ -1,3 +1,5 @@
+'use strict';
+
 var projectView = {};
 
 projectView.handleMainNav = function() {
