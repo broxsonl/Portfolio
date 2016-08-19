@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width, initial-scale=1”>
     <title>Portfolio | Lee Broxson - Javascript Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share+Tech">
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="vendor/styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -14,13 +15,15 @@
       <script id="project-template" type="text/x-handlebars-template">
         <article data-name="{{name}}">
           <h1 class="project-title">{{title}}</h1>
-          <p class="sub-heading">{{subtitle}}</p>
+          <p class="sub-heading">{{subtitle}} - <span class ="days-ago">{{publishStatus}}</span></p>
           <a href="#" class="see-more">See more &rarr;</a>
+          <br>
+          <br>
+          <br>
           <div class="project-picture">
             <a href="{{projectUrl}}">
               <img src="{{projectImage}}" alt="{{imageAlt}}">
             </a>
-            <time pubdate datetime="{{updatedOn}}">Publish Time</time>
           </div>
         </article>
       </script>
@@ -31,6 +34,7 @@
           <p class="testimonial-quote"> {{quote}} </p>
           <address><a class="testimonial-author" href="{{quoteAuthorLink}}">{{quoteAuthor}}</a></address>
         </article>
+        <br>
       </script>
   </head>
   <body>
@@ -60,16 +64,18 @@
     <main>
       <!--Projects Section -->
       <section id="projects" class="tab-content">
-        <h1>
+        <br>
+        <br>
+        <h2>
           Development Projects
-        </h1>
+        </h2>
       </section>
 
       <!--Testimonials section-->
       <section id="testimonials" class="tab-content">
-        <h1>
+        <h2>
           Client Testimonials
-        </h1>
+        </h2>
       </section>
     </main>
     <footer>

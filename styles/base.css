@@ -1,9 +1,16 @@
 h1 {
-  font-size: 30px;
+  font-family: 'Share Tech', sans-serif;
+  /*font-size: 30px;*/
   margin-top: 0;
 }
 
 .project-picture img {
   width: 400px;
   height: 280px;
+}
+
+h2{
+  font-family: 'Share Tech', sans-serif;
+  font-size: 35px;
+  margin-top: 0;
 }

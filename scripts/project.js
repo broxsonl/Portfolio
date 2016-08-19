@@ -14,11 +14,10 @@ function Project (opts) {
 Project.prototype.toHtml = function() {
   var source = $('#project-template').html();
   var templateRender = Handlebars.compile(source);
-  return templateRender(this);
 
-  // $newProject.find('time').html('last updated ' + parseInt((new Date() - new Date(this.updatedOn))/60/60/24/1000) + ' days ago');
-  // $newProject.removeClass('template');
-  // return template;
+  this.daysAgo = parseInt((new Date() - new Date(this.updatedOn))/60/60/24/1000);
+  this.publishStatus = this.updatedOn ? 'updated ' + this.daysAgo + ' days ago' : '(draft)';
+  return templateRender(this);
 };
 
 projectObjectsArray.sort(function(firstElement, secondElement) {

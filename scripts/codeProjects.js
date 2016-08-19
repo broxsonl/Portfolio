@@ -2,7 +2,7 @@ var projectObjectsArray = [
   {
     name:               'about_me',
     title:              'Code 201 About_Me Project',
-    subtitle:           'subtitle stuff here',
+    subtitle:           'Who am I, really?',
     projectUrl:         'https://broxsonl.github.io/about_me/',
     projectImage:       'assets/about_mescreen.png',
     imageAlt:           'about_me project pic',
