@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
 
-    <!--Template for Projects constructor and page -->
+    <!--TEMPLATE FOR PROJECTS-->
       <script id="project-template" type="text/x-handlebars-template">
         <article data-name="{{name}}">
           <h1 class="project-title">{{title}}</h1>
@@ -27,7 +27,9 @@
           </div>
         </article>
       </script>
+      <!--END TEMPLATE FOR PROJECTS CONSTRUCTOR AND PAGE-->
 
+      <!--TEMPLATE FOR TESTIMONIALS-->
       <script id="testimonial-template" type="text/x-handlebars-template">
         <article data-name="{{name}}">
           <img src="assets/quote.png" alt="Big Quotation Marks">
@@ -36,7 +38,9 @@
         </article>
         <br>
       </script>
+      <!--END TEMPLATE FOR TESTIMONIALS CONSTRUCTOR AND PAGE-->
   </head>
+
   <body>
     <header class="page-header">
       <div class="logo-and-name">
@@ -49,9 +53,8 @@
         </h2>
       </div>
       <nav class="main-nav">
-        <!--Hamburger menu-->
+        <!--HAMBURGER MENU-->
         <div class="icon-menu"></div>
-        <!--TODO: Add links for the Home and Portfolio tabs-->
         <ul>
           <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
           <li class="tab" data-content="testimonials"><a href="#" class="icon-pencil"> Testimonials</a></li>
@@ -62,7 +65,7 @@
     </header>
     <div class="clearfix"></div>
     <main>
-      <!--Projects Section -->
+      <!--PROJECTS SECTION -->
       <section id="projects" class="tab-content">
         <br>
         <br>
@@ -70,15 +73,29 @@
           Development Projects
         </h2>
       </section>
-
-      <!--Testimonials section-->
+      <!--TESTIMONIALS SECTION-->
       <section id="testimonials" class="tab-content">
         <h2>
           Client Testimonials
         </h2>
       </section>
     </main>
+
     <footer>
+      <div class="footer-about-blurb">
+        <img class="footer-pic" src="assets/LeePic.jpg">
+        <p><span class="name">Lee Broxson</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <ul class='footer-social-media'>
+        <li><a href="http://twitter.com/Kujakuseki" target="_blank" class="icon-twitter"> </a></li>
+        <li><a href="https://github.com/broxsonl" target="_blank" class="icon-github"> </a></li>
+        <li><a href="https://www.linkedin.com/in/lee-broxson-75027314" target="_blank" class="icon-linkedin"> </a></li>
+      </ul>
+      <div class="copyright">
+        <p>
+          Content is copyright &copy; 2016 Lee Broxson Web Design unless otherwise stated.
+        </p>
+      </div>
     </footer>
     <script src="vendor/scripts/jquery-3.1.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
