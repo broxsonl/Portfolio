@@ -1,17 +1,10 @@
-'use strict';
-
-var projects = [];
-
-function Project (opts) {
-  // Save ALL the properties of `opts` into `this`
-  this.name = opts.name;
-  this.title = opts.title;
-  this.subtitle = opts.subtitle;
-  this.projectUrl = opts.projectUrl;
-  this.projectImage = opts.projectImage;
-  this.imageAlt = opts.imageAlt;
-  this.updatedOn = opts.updatedOn;
+function Project (options) {
+  for (keys in options) {
+    this[keys] = options[keys];
+  }
 };
+
+Project.allProjects = [];
 
 Project.prototype.toHtml = function() {
   var source = $('#project-template').html();
@@ -22,14 +15,35 @@ Project.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-projectObjectsArray.sort(function(firstElement, secondElement) {
-  return (new Date(secondElement.updatedOn)) - (new Date(firstElement.updatedOn));
-});
+Project.loadAll = function(inputData) {
+  inputData.sort(function(a,b) {
+    return (new Date(b.updatedOn)) - (new Date(a.updatedOn));
+  }).forEach(function(element) {
+    Project.allProjects.push(new Project(element));
+  });
+};
 
-projectObjectsArray.forEach(function(theCurrentProjectObject) {
-  projects.push(new Project(theCurrentProjectObject));
-});
-
-projects.forEach(function(project) {
-  $('#projects').append(project.toHtml());
-});
+Project.fetchAll = function() {
+  if (!localStorage.codeProjects) {
+    $.getJSON('scripts/codeProjects.json', function(data, message, xhr) {
+      localStorage.codeProjects = JSON.stringify(data);
+      localStorage.eTag = JSON.stringify(xhr.getResponseHeader('eTag'));
+      Project.fetchAll();
+    });
+  }
+  else {
+    $.getJSON('scripts/codeProjects.json', function(data, message, xhr) {
+      var newEtag = JSON.stringify(xhr.getResponseHeader('eTag'));
+      if (newEtag !== localStorage.eTag) {
+        localStorage.codeProjects = JSON.stringify(data);
+        localStorage.eTag = newEtag;
+      }
+      // var retreivedData = JSON.parse(localStorage.codeProjects);
+      // Project.loadAll(retreivedData);
+      // projectView.renderIndexPage();
+    });
+    var retreivedData = JSON.parse(localStorage.codeProjects);
+    Project.loadAll(retreivedData);
+    projectView.renderIndexPage();
+  }
+};
