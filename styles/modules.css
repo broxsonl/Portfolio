@@ -37,7 +37,7 @@ body {
 .main-nav li {
   margin-right: .4rem;
   font-size: 1.5rem;
-  border-bottom: 1px solid #000;
+  margin-top: 6px;
 }
 
 .main-nav ul {
@@ -46,10 +46,6 @@ body {
   list-style: none;
   clear: both;
   text-decoration: none;
-}
-
-.main-nav:hover ul {
-  display: block;
 }
 
 .main-nav ul li a {
@@ -80,6 +76,15 @@ p.sub-heading {
   color: brown;
 }
 
+.copyright {
+  border-top: 1px black solid;
+}
+
+.copyright p {
+  font-size: 11px;
+  font-style: italic;
+}
+
 .see-more {
   margin-top: 0;
   color: grey;
@@ -98,10 +103,6 @@ p.sub-heading {
   display: none;
 }
 
-article {
-
-}
-
 #testimonials {
   text-align: center;
 }
@@ -118,6 +119,32 @@ article {
 
 #testimonials {
   border-top: 4px solid black;
+}
+.footer-about-blurb {
+  border-top: black 4px solid;
+  padding: 10px;
+}
+
+.footer-about-blurb img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 8px;
+}
+
+.footer-social-media li{
+  display: inline;
+  list-style: none;
+  font-size: 40px;
+  color: brown;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 400px) {
+
+  .main-nav:hover ul {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 400px) {
@@ -140,14 +167,10 @@ article {
   }
 
   .main-nav ul li {
-    /*border-bottom: 1px solid #000;*/
     list-style: none;
     font-size: 15px;
     padding-left: 15px;
     padding-bottom: 0;
-  }
-
-  .main-nav:hover {
   }
 }
 
