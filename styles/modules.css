@@ -147,7 +147,7 @@ p.sub-heading {
   }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 401px) {
 
   .icon-menu {
     display: none;

@@ -1,0 +1,51 @@
+[
+  {
+    "name":             "Rick_Patci",
+    "quote":            "Lee is the best programmer ever. I am continually blown away by what he can do.",
+    "quoteAuthor":      "Rick Patci",
+    "quoteAuthorLink":  "https://github.com/patci",
+    "awesomePoints":    "250"
+  },
+  {
+    "name":             "Sam_Hamm",
+    "quote":            "Lee is so great. Best student I have ever had.",
+    "quoteAuthor":      "Sam Hamm",
+    "quoteAuthorLink":  "https://github.com/samhamm",
+    "awesomePoints":    "300"
+  },
+  {
+    "name":             "Dan_Newsome",
+    "quote":            "Lee is the bestest everer. Wow! What an incredible developer. I do not know if I have ever seen his like before, and I wonder if the world will ever see it again.",
+    "quoteAuthor":      "Daniel Newsome",
+    "quoteAuthorLink":  "http://danielnewsome.com",
+    "awesomePoints":    "600"
+  },
+  {
+    "name":             "Munir_Ibrahim",
+    "quote":            "That Lee guy is just codin' out of control. Mad respect for his skills.",
+    "quoteAuthor":      "Munir Ibrahim",
+    "quoteAuthorLink":  "http://muniribrahim.com",
+    "awesomePoints":    "150"
+  },
+  {
+    "name":             "Rick_Patci",
+    "quote":            "Lee continues to impress me daily. I am reaaly inspired by the things he is able to code, and how he is able to think and work through many of the challenges he encounters in his path to learning.",
+    "quoteAuthor":      "Rick Patci",
+    "quoteAuthorLink":  "https://github.com/patci",
+    "awesomePoints":    "500"
+  },
+  {
+    "name":             "Sam_Hamm",
+    "quote":            "Lee was great in 201, and I'm sure he's continuing to do excellent things in 301. I hope he goes on to have a fulfilling and rewarding career as a developer.",
+    "quoteAuthor":      "Sam Hamm",
+    "quoteAuthorLink":  "https://github.com/samhamm",
+    "awesomePoints":    "425"
+  },
+  {
+    "name":             "Aaron_Krause",
+    "quote":            "What a totally rad developer dude. 100 points to Gryffindor.",
+    "quoteAuthor":      "Aaron Krause",
+    "quoteAuthorLink":  "http://www.aaronkrause.com",
+    "awesomePoints":    "100"
+  }
+]
