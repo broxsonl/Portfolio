@@ -11,26 +11,8 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
 
-    <!--TEMPLATE FOR PROJECTS-->
-      <script id="project-template" type="text/x-handlebars-template">
-        <article data-name="{{name}}">
-          <h1 class="project-title">{{title}}</h1>
-          <p class="sub-heading">{{subtitle}} - <span class ="days-ago">{{publishStatus}}</span></p>
-          <a href="#" class="see-more">See more &rarr;</a>
-          <br>
-          <br>
-          <div class="project-picture">
-            <a href="{{projectUrl}}">
-              <img src="{{projectImage}}" alt="{{imageAlt}}">
-            </a>
-            <br>
-          </div>
-        </article>
-      </script>
-      <!--END TEMPLATE FOR PROJECTS CONSTRUCTOR AND PAGE-->
-
-      <!--TEMPLATE FOR TESTIMONIALS-->
-      <script id="awesome-template" type="text/x-handlebars-template">
+      <!--TEMPLATE FOR AWESOME Points-->
+      <script id="testimonial-template" type="text/x-handlebars-template">
         <li><strong>{{name}}</strong>:{{awesomePoints}} AWESOME points!</li>
       </script>
   </head>
@@ -59,7 +41,7 @@
     </header>
     <main class="clearfix">
       <!--AWESOME POINTS SECTION-->
-      <h2>Total number of Testimonials:</h2><span id=testimonial-total></span>
+      <h2 class="testimonial-total"><strong>Total number of Testimonials: </strong> </h2> 
       <section class="awesome-points">
         <h2>Awesome Points From Testimonials</h2>
         <br>
@@ -89,9 +71,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <!-- <script src="scripts/codeProjects.json"></script> -->
     <script src="scripts/testimonialCreator.js"></script>
+    <script src="scripts/adminPage.js"></script>
     <!-- <script src="scripts/project.js"></script> -->
     <!-- <script src="scripts/testimonials.js"></script> -->
     <!-- <script src="scripts/projectView.js"></script> -->
-    <script src="scripts/adminPage.js"></script>
   </body>
 </html>
