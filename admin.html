@@ -30,15 +30,9 @@
       <!--END TEMPLATE FOR PROJECTS CONSTRUCTOR AND PAGE-->
 
       <!--TEMPLATE FOR TESTIMONIALS-->
-      <script id="testimonial-template" type="text/x-handlebars-template">
-        <article data-name="{{name}}">
-          <img src="assets/quote.png" alt="Big Quotation Marks">
-          <p class="testimonial-quote"> {{quote}} </p>
-          <address><a class="testimonial-author" href="{{quoteAuthorLink}}">{{quoteAuthor}}</a></address>
-        </article>
-        <br>
+      <script id="awesome-template" type="text/x-handlebars-template">
+        <li><strong>{{name}}</strong>:{{awesomePoints}} AWESOME points!</li>
       </script>
-      <!--END TEMPLATE FOR TESTIMONIALS CONSTRUCTOR AND PAGE-->
   </head>
 
   <body>
@@ -63,21 +57,15 @@
         </ul>
       </nav>
     </header>
-    <!-- <div class="clearfix"></div> -->
     <main class="clearfix">
-      <!--PROJECTS SECTION -->
-      <section id="projects" class="tab-content">
+      <!--AWESOME POINTS SECTION-->
+      <h2>Total number of Testimonials:</h2><span id=testimonial-total></span>
+      <section class="awesome-points">
+        <h2>Awesome Points From Testimonials</h2>
         <br>
-        <br>
-        <h2>
-          Development Projects
-        </h2>
-      </section>
-      <!--TESTIMONIALS SECTION-->
-      <section id="testimonials" class="tab-content">
-        <h2>
-          Client Testimonials
-        </h2>
+        <ul class="awesome-points">
+
+        </ul>
       </section>
     </main>
 
@@ -99,8 +87,10 @@
     </footer>
     <script src="vendor/scripts/jquery-3.1.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <!-- <script src="scripts/codeProjects.json"></script> -->
     <script src="scripts/testimonialCreator.js"></script>
     <script src="scripts/project.js"></script>
+    <!-- <script src="scripts/testimonials.js"></script> -->
     <script src="scripts/projectView.js"></script>
     <script src="scripts/adminPage.js"></script>
   </body>
