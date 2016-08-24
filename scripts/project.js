@@ -1,5 +1,6 @@
+'use strict';
 function Project (options) {
-  for (keys in options) {
+  for (var keys in options) {
     this[keys] = options[keys];
   }
 };
