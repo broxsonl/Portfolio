@@ -26,14 +26,14 @@ Project.loadAll = function(inputData) {
 
 Project.fetchAll = function() {
   if (!localStorage.codeProjects) {
-    $.getJSON('scripts/codeProjects.json', function(data, message, xhr) {
+    $.getJSON('data/codeProjects.json', function(data, message, xhr) {
       localStorage.codeProjects = JSON.stringify(data);
       localStorage.eTag = JSON.stringify(xhr.getResponseHeader('eTag'));
       Project.fetchAll();
     });
   }
   else {
-    $.getJSON('scripts/codeProjects.json', function(data, message, xhr) {
+    $.getJSON('data/codeProjects.json', function(data, message, xhr) {
       var newEtag = JSON.stringify(xhr.getResponseHeader('eTag'));
       if (newEtag !== localStorage.eTag) {
         localStorage.codeProjects = JSON.stringify(data);
