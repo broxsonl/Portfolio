@@ -38,11 +38,11 @@ Testimonial.fetchAll = function() {
     });
     var retreivedData = JSON.parse(localStorage.testimonials);
     Testimonial.loadAll(retreivedData);
-    renderTestimonialPage();
+    Testimonial.renderTestimonialPage();
   }
 };
 
-renderTestimonialPage = function() {
+Testimonial.renderTestimonialPage = function() {
   Testimonial.allTestimonials.forEach(function(a) {
     $('#testimonials').append(a.toHtml());
   });
