@@ -2,10 +2,10 @@
 Testimonial.renderAdminPage = function() {
   var source = $('#testimonial-template').html();
   var awesomeRender = Handlebars.compile(source);
-  Testimonial.awesomePointsByTestimonial().forEach(function(awesomePointsObj) {
-    $('document .awesome-points').append(awesomeRender(awesomePointsObj));
+  Testimonial.awesomePointsByAuthor().forEach(function(awesomePointsObj) {
+    $('.awesome-points ul').append(awesomeRender(awesomePointsObj));
   });
-  $('#testimonial-total').text(Testimonial.allTestimonials.length);
+  $('.testimonial-total span').text(Testimonial.allTestimonials.length);
 };
 
 Testimonial.allTestimonialAuthors = function() {
@@ -34,4 +34,5 @@ Testimonial.awesomePointsByAuthor = function() {
   });
 };
 
+Testimonial.renderAdminPage();
 // Testimonial.fetchall();
