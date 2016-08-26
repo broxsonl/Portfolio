@@ -1,3 +1,5 @@
+<!--STRETCH TODO: Use jQuery UI to create a Draggable element that can interact with the page. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,9 +41,15 @@
         <br>
       </script>
       <!--END TEMPLATE FOR TESTIMONIALS CONSTRUCTOR AND PAGE-->
+      <!--TEMPLATE FOR AWESOME PTS-->
+      <script id="admin-template" type="text/x-handlebars-template">
+        <li><strong><a href="{{quoteAuthorLink}}">{{name}}</a></strong>:{{awesomePoints}} AWESOME points!</li>
+      </script>
+      <!--END TEMPLATE FOR AWESOME PTS CONSTRUCTOR AND PAGE-->
   </head>
 
   <body>
+    <!--Depending on what page the user is on, have that page's navbar name appear differentl. eg, if they're on Index, make index bold, others not.-->
     <header class="page-header">
       <div class="logo-and-name">
         <img src="assets/LeePic.jpg">
@@ -58,8 +66,10 @@
         <ul>
           <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
           <li class="tab" data-content="testimonials"><a href="#" class="icon-pencil"> Testimonials</a></li>
+          <li class="tab" data-content="admin"><a href="#" class="icon-spinner7"> Admin</a></li>
           <li><a href="http://twitter.com/Kujakuseki" target="_blank" class="icon-twitter"> Twitter</a></li>
           <li><a href="https://github.com/broxsonl" target="_blank" class="icon-github"> GitHub</a></li>
+          <!--TODO: Add a Linkedin option to navbar-->
         </ul>
       </nav>
     </header>
@@ -67,6 +77,7 @@
     <main class="clearfix">
       <!--PROJECTS SECTION -->
       <section id="projects" class="tab-content">
+        <!--TODO: Remove <br> tags and correct the spacing issues with CSS-->
         <br>
         <br>
         <h2>
@@ -78,6 +89,14 @@
         <h2>
           Client Testimonials
         </h2>
+      </section>
+      <!--AWESOME POINTS SECTION-->
+      <section id="admin" class="tab-content">
+        <h2 class="testimonial-total"><strong>Total number of Testimonials: <span> </span></strong> </h2>
+          <h2>Awesome Points From Testimonials</h2>
+          <ul>
+
+          </ul>
       </section>
     </main>
 
@@ -102,6 +121,6 @@
     <script src="scripts/testimonialCreator.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>
-    <!-- <script src="scripts/adminPage.js"></script> -->
+    <script src="scripts/adminPage.js"></script>
   </body>
 </html>

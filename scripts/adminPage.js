@@ -1,9 +1,10 @@
+//TODO: DONE! Go through all js files and comment above each code block what the code is doing to help ensure both comprehension and readability for later examination.
 'use strict';
 Testimonial.renderAdminPage = function() {
-  var source = $('#testimonial-template').html();
+  var source = $('#admin-template').html();
   var awesomeRender = Handlebars.compile(source);
   Testimonial.awesomePointsByAuthor().forEach(function(awesomePointsObj) {
-    $('.awesome-points ul').append(awesomeRender(awesomePointsObj));
+    $('#admin ul').append(awesomeRender(awesomePointsObj));
   });
   $('.testimonial-total span').text(Testimonial.allTestimonials.length);
 };
@@ -35,4 +36,3 @@ Testimonial.awesomePointsByAuthor = function() {
 };
 
 Testimonial.renderAdminPage();
-// Testimonial.fetchall();

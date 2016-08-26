@@ -1,6 +1,8 @@
 'use strict';
+//EMPTY FUNCTION THAT THE PAGE WILL BUILD INTO
 var projectView = {};
 
+//CONTROLS WHEN A NAV TAB IS CLICKED WHICH "single-page app" PAGE IS LOADED
 projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     var $clickedOn = $(this).attr('data-content');
@@ -10,15 +12,14 @@ projectView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
+//HIDES ALL BUT THE BEGINNING OF EACH PROJECT, SHOWS ALL WHEN CLICKED AGAIN
 projectView.setTeasers = function() {
   $('.project-picture').hide();
-
   $('#projects').on('click', '.see-more', function(e) {
     e.preventDefault();
     $(this).parent().find('*').fadeIn();
     $(this).html('See less &larrhk;').removeClass('see-more').addClass('see-less');
   });
-
   $('#projects').on('click', '.see-less', function(event){
     event.preventDefault();
     $('.project-picture').hide();
@@ -26,7 +27,7 @@ projectView.setTeasers = function() {
 
   });
 };
-
+//APPENDS EACH PROJECT FROM THE allProjects ARRAY AFTER ITS COMPLETED INSTANTIATION. ALSO RUNS handleMainNav to PREPARE THE CLICK LISTENERS. ALSO MINIMIZES THE EXCESS TYPE FOR EACH PROJECT.
 projectView.renderIndexPage = function() {
   Project.allProjects.forEach(function(a) {
     $('#projects').append(a.toHtml());
@@ -34,5 +35,5 @@ projectView.renderIndexPage = function() {
   projectView.handleMainNav();
   projectView.setTeasers();
 };
-
+//RUN FETCHALL HERE TO START THE CHAIN AND TO ENSURE PROJECTVIEW IS LOADED IN FIRST.
 Project.fetchAll();
