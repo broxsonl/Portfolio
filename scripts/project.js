@@ -1,3 +1,5 @@
+//TODO: Wrap each js page into a modular function, as we have with the labs in class.
+
 'use strict';
 function Project (options) {
   for (var keys in options) {
@@ -24,6 +26,7 @@ Project.loadAll = function(inputData) {
   });
 };
 
+//TODO: Refactor the below code to obtain only the head when getting the eTag.
 Project.fetchAll = function() {
   if (!localStorage.codeProjects) {
     $.getJSON('data/codeProjects.json', function(data, message, xhr) {

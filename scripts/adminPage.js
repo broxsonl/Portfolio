@@ -36,4 +36,3 @@ Testimonial.awesomePointsByAuthor = function() {
 };
 
 Testimonial.renderAdminPage();
-// Testimonial.fetchall();
