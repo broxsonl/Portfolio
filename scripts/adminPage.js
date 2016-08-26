@@ -1,3 +1,4 @@
+//TODO: Go through all js files and comment above each code block what the code is doing to help ensure both comprehension and readability for later examination.
 'use strict';
 Testimonial.renderAdminPage = function() {
   var source = $('#testimonial-template').html();
