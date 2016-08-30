@@ -64,9 +64,9 @@
         <!--HAMBURGER MENU-->
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
-          <li class="tab" data-content="testimonials"><a href="#" class="icon-pencil"> Testimonials</a></li>
-          <li class="tab" data-content="admin"><a href="#" class="icon-user-tie"> Admin</a></li>
+          <li class="tab" data-content="projects"><a href="/" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="testimonials"><a href="/testimonials" class="icon-pencil"> Testimonials</a></li>
+          <li class="tab" data-content="admin"><a href="/admin" class="icon-user-tie"> Admin</a></li>
           <li><a href="http://twitter.com/Kujakuseki" target="_blank" class="icon-twitter"> Twitter</a></li>
           <li><a href="https://github.com/broxsonl" target="_blank" class="icon-github"> GitHub</a></li>
           <!--TODO: Add a Linkedin option to navbar-->
@@ -116,11 +116,20 @@
         </p>
       </div>
     </footer>
+    <!--Javascript Library Scripts-->
     <script src="vendor/scripts/jquery-3.1.0.js"></script>
+    <script src="vendor/scripts/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="scripts/testimonialCreator.js"></script>
-    <script src="scripts/project.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script src="scripts/adminPage.js"></script>
+    <!--Models Scripts-->
+    <script src="scripts/models/testimonialCreator.js"></script>
+    <script src="scripts/models/project.js"></script>
+    <script src="scripts/models/adminPage.js"></script>
+    <!--View Scripts-->
+    <script src="scripts/views/projectView.js"></script>
+    <!--Controllers Scripts-->
+    <script src="scripts/controllers/ProjectController.js"></script>
+    <script src="scripts/controllers/testimonialController.js"></script>
+    <script src="scripts/controllers/adminController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>

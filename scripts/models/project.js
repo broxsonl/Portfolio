@@ -54,6 +54,6 @@ Project.fetchAll = function() {
     //AT END OF FUNCTION, AFTER ALL STORAGE IS DONE, PARSE THE STRINGIFIED DATA IN JSON, RUN LOADALL WITH THE DATA PASSED IN, THEN RUN THE RENDERINDEXPAGE FUNCTION TO DISPLAY IT WITH ALL OF OUR INFO.
     var retreivedData = JSON.parse(localStorage.codeProjects);
     Project.loadAll(retreivedData);
-    projectView.renderIndexPage();
+    projectView.renderHomePage();
   }
 };
