@@ -4,16 +4,6 @@
 //EMPTY FUNCTION THAT THE PAGE WILL BUILD INTO
 var projectView = {};
 
-//Below is no longer needed with the Controllers set up to do the work, as well as manipulate the history object.
-  // projectView.handleMainNav = function() {
-  //   $('.main-nav').on('click', '.tab', function() {
-  //     var $clickedOn = $(this).attr('data-content');
-  //     $('.tab-content').hide();
-  //     $('#' + $clickedOn).fadeIn('slow');
-  //   });
-  //   $('.main-nav .tab:first').click();
-  // };
-
 //HIDES ALL BUT THE BEGINNING OF EACH PROJECT, SHOWS ALL WHEN CLICKED AGAIN
 projectView.setTeasers = function() {
   $('.project-picture').hide();

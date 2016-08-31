@@ -4,11 +4,9 @@
   reposObj.allRepos = [];
 
   reposObj.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/broxsonl/repos' +
+    $.get('/github.com/users/broxsonl/repos' +
            '?per_page=10' +
-           '&sort=updated',
-      type: 'GET',
+           '&sort=updated')
       headers: {'Authorization': 'token ' + githubToken},
       success: function(data) {
         reposObj.allRepos = data;
