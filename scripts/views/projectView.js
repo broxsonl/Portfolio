@@ -1,4 +1,6 @@
 'use strict';
+//TODO: Not sure how to modularize this. Need help from TA/Rick.
+
 //EMPTY FUNCTION THAT THE PAGE WILL BUILD INTO
 var projectView = {};
 
