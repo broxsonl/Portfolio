@@ -4,17 +4,18 @@
   reposObj.allRepos = [];
 
   reposObj.requestRepos = function(callback) {
-    $.get('/github.com/users/broxsonl/repos' +
+    $.get('/github/users/broxsonl/repos' +
            '?per_page=10' +
            '&sort=updated')
            .done(function(data) {
              reposObj.allRepos = data;
-           }).done(callback);
+           })
+           .done(callback);
   };
 
-  reposObj.withTheAttribute = function(attr) {
+  reposObj.withTheAttribute = function(myAttr) {
     return reposObj.allRepos.filter(function(aRepo) {
-      return aRepo[attr];
+      return aRepo[myAttr];
     });
   };
 
