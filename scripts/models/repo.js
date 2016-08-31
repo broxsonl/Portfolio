@@ -7,17 +7,14 @@
     $.get('/github.com/users/broxsonl/repos' +
            '?per_page=10' +
            '&sort=updated')
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function(data) {
-        reposObj.allRepos = data;
-        callback();
-      }
-    });
+           .done(function(data) {
+             reposObj.allRepos = data;
+           }).done(callback);
   };
 
-  reposObj.withTheAttribute = function(myAttr) {
+  reposObj.withTheAttribute = function(attr) {
     return reposObj.allRepos.filter(function(aRepo) {
-      return aRepo[myAttr];
+      return aRepo[attr];
     });
   };
 
