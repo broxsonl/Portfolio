@@ -46,10 +46,24 @@
         <li><strong><a href="{{quoteAuthorLink}}">{{name}}</a></strong>:{{awesomePoints}} AWESOME points!</li>
       </script>
       <!--END TEMPLATE FOR AWESOME PTS CONSTRUCTOR AND PAGE-->
+
+      <!--TEMPLATE FOR REPOSITORY LIVE-->
+      <script id="repo-template" type="text/x-handlebars-template">
+        <li>
+          <a href="{{url}}" target="_blank"><h3>{{name}}</h3></a>
+          <p>Description: {{description}}</p>
+          <p>Language: {{language}}</p>
+          <p>Created: {{created_at}}</p>
+          <p>Last updated: {{updated_at}}</p>
+          <p>Times forked: {{forks_count}}</p>
+          <p>Watchers: {{watchers_count}}</p>
+        </li>
+      </script>
+      <!--END TEMPLATE FOR REPOSITORY LIVE-->
   </head>
 
   <body>
-    <!--Depending on what page the user is on, have that page's navbar name appear differentl. eg, if they're on Index, make index bold, others not.-->
+    <!--TODO: Depending on what page the user is on, have that page's navbar name appear differentl. eg, if they're on Index, make index bold, others not.-->
     <header class="page-header">
       <div class="logo-and-name">
         <img src="assets/LeePic.jpg">
@@ -66,9 +80,10 @@
         <ul>
           <li class="tab" data-content="projects"><a href="/" class="icon-home"> Home</a></li>
           <li class="tab" data-content="testimonials"><a href="/testimonials" class="icon-pencil"> Testimonials</a></li>
-          <li class="tab" data-content="admin"><a href="/admin" class="icon-user-tie"> Admin</a></li>
+          <li class="tab" data-content="repositories"><a href="/repositories" class="icon-spinner7">Repositories</a></li>
           <li><a href="http://twitter.com/Kujakuseki" target="_blank" class="icon-twitter"> Twitter</a></li>
           <li><a href="https://github.com/broxsonl" target="_blank" class="icon-github"> GitHub</a></li>
+          <li class="tab" data-content="admin"><a href="/admin" class="icon-user-tie"> Admin</a></li>
           <!--TODO: Add a Linkedin option to navbar-->
         </ul>
       </nav>
@@ -95,8 +110,14 @@
         <h2 class="testimonial-total"><strong>Total number of Testimonials: <span> </span></strong> </h2>
           <h2>Awesome Points From Testimonials</h2>
           <ul>
-
           </ul>
+      </section>
+      <!--REPOSITORIES SECTION-->
+      <section id="repositories" class="tab-content">
+        <h2>Real-time Github Project Repository Information:</h2>
+        <ul>
+
+        </ul>
       </section>
     </main>
 
@@ -124,12 +145,16 @@
     <script src="scripts/models/testimonialCreator.js"></script>
     <script src="scripts/models/project.js"></script>
     <script src="scripts/models/adminPage.js"></script>
+    <script src="scripts/models/repo.js"></script>
+    <script src="githubToken.js"></script>
     <!--View Scripts-->
     <script src="scripts/views/projectView.js"></script>
+    <script src="scripts/views/repoView.js"></script>
     <!--Controllers Scripts-->
     <script src="scripts/controllers/ProjectController.js"></script>
     <script src="scripts/controllers/testimonialController.js"></script>
     <script src="scripts/controllers/adminController.js"></script>
+    <script src="scripts/controllers/repositoryController.js"></script>
     <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>
